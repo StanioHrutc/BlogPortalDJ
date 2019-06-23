@@ -1,0 +1,6 @@
+1) python -m venv ./venv - create virtual environment in actual folder
+2) venv\Scripts\actiate - activate virtual env on windows
+3) pip3 freeze - freeze all libraries and tools that downloaded inside venv
+4) deactivate - deactivate virtual env
+5) django-admin startproject [name] [.]-for current directory
+6) giignore.io - for generation default gitignore files for projects
