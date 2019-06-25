@@ -4,3 +4,7 @@
 4) deactivate - deactivate virtual env
 5) django-admin startproject [name] [.]-for current directory
 6) giignore.io - for generation default gitignore files for projects
+7) py manage.py runserver - run default django server
+8) py manage.py startapp - create  application in django project
+9) we should use include(...) to concatanate urls from custom apps with system one
+10) path('') - base page(index page)
