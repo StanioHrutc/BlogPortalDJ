@@ -17,10 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 
 from stories import urls
-
+from contact import views as contact_views
 
 
 urlpatterns = [
     path('', include('stories.urls')),
+    path('contact/', include('contact.urls')),
     path('admin/', admin.site.urls),
 ]

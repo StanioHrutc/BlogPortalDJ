@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'stories.urls'
+ROOT_URLCONF = 'blogdjango.urls'
 
 TEMPLATES = [
     {
