@@ -482,3 +482,235 @@ footer ul.social_profiles li a,
 	-moz-transition: .2s linear;
 	-o-transition: .2s linear;
 }
+
+
+/* ABOUT.HTML */
+
+#content {
+	width: 860px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	padding: 54px;
+}
+
+#content > #me {
+	width: 300px;
+	height: 400px;
+	display: inline-block;
+	background-image: url('../img/man.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+#content > #about-author {
+	width: 400px;
+	float: right;
+	display: inline-block;
+	padding-right: 50px;
+}
+
+#about-author > h1 {
+	font-family: 'LatoBold', 'Helvetica', arial;
+	font-weight: bold;
+	font-size: 22px;
+	text-transform: uppercase;
+	color: #4f4e4e;
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+
+#about-author > p {
+	font-family: 'LatoRegular', 'Helvetica', arial;
+	font-size: 14px;
+	color: #606060;
+	line-height: 20px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+
+/* Single Story . HTML */
+
+
+
+#single-story {
+	margin: 0 auto;
+	padding: 20px;
+	width: 800px;
+}
+
+#single-story > .story-title {
+	font-family: 'LatoBold', 'Helvetica', arial;
+	font-weight: bold;
+	font-size: 28px;
+	text-transform: uppercase;
+	line-height: 30px;
+	text-align: center;
+	margin-top: 32px;
+}
+
+.picture > img {
+	margin-top: 32px;
+	width: 800px;
+	height: 450px;
+}
+
+
+.story-text > p {
+	margin-top: 34px;
+	text-align: left;
+	font-family: 'LatoRegular', 'Helvetica', arial;
+	font-size: 16px;
+	color: #606060;
+	line-height: 20px;
+}
+
+.additional {
+	margin-top: 40px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.additional > .authoroty {
+	float: right;
+	font-family: 'LatoRegular', 'Helvetica', arial;
+	font-size: 16px;
+	color: #606060;
+	line-height: 20px;
+}
+
+.additional > .go-back {
+	float: left;
+}
+.additional > .go-back > a {
+	border: 2px #c2c2c2 solid;
+	padding: 10px 30px 10px 30px;
+	border-radius: 34px;
+	color: #c2c2c2;
+	text-decoration: none;
+	text-align: center;
+	font-family: 'LatoRegular', 'Helvetica', arial;
+	font-size: 16px;
+}
+
+
+.go-back > a:hover {
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	color: #292929;
+	border: 2px #58c93a solid;
+}
+
+
+/* CONTACT.HTML */
+
+
+
+#contact {
+	width: 800px;
+	height: 460px;
+	margin: 0 auto;
+	padding: 18px;
+}
+
+#contact > h1 {
+	font-family: 'LatoRegular', 'Helvetica', arial;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	font-size: 24px;
+	color: #292929;
+	text-align: center;
+	margin-top: 12px;
+}
+
+
+.container-contact {
+	margin-top: 22px;
+}
+
+
+
+.container-contact:first-child {
+	opacity: 1;
+}
+
+.container-contact > label {
+	color: #292929;
+	font-family: 'LatoRegular', 'Helvetica', arial;
+	font-size: 18px;
+	letter-spacing: 0.1em;
+	margin-top: 18px;
+}
+
+.container-contact > input {
+	display: block;
+	margin-top: 14px;
+	width: 100%;
+	height: 32px;
+	border: 2px #c2c2c2 solid;
+	border-radius: 8px;
+	color: #292929;
+	font-family: 'LatoRegular', 'Helvetica', arial;
+	font-size: 18px;
+	padding-left: 15px;
+}
+
+.container-contact > #two, #three {
+	opacity: 0;
+}
+
+.container-contact > #two.fade-elem, #three.fade-elem {
+	opacity: 1;
+	-webkit-transition: opacity 5s ease;
+	-moz-transition: opacity 5s ease;
+	-o-transition: opacity 5s ease;
+	transition: opacity 5s ease;
+}
+
+
+
+.container-contact > input:focus, #two.fade-elem:focus, #three.fade-elem:focus {
+	outline-style: none;
+	border: 2px #292929 solid;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+}
+
+/* btn style */
+form > .button-holder {
+	text-align: center;
+	margin-top: 48px;
+}
+form > .button-holder > .btn-send {
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	border: 2px #c2c2c2 solid;
+	padding-top: 20px;
+	padding-left: 142px;
+	padding-right: 142px;
+	padding-bottom: 20px;
+	border-radius: 16px;
+	background-color: #fff;
+	color: #292929;
+	font-family: 'LatoRegular', 'Helvetica', arial;
+	font-weight: bold;
+	letter-spacing: 0.4em;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+form > .button-holder > .btn-send:hover {
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	color: #58c93a;
+	background-color: #292929;
+	border: 2px #292929 solid;
+}

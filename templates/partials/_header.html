@@ -1,0 +1,39 @@
+{% load static %}
+<header>
+    <div class="wrapper">
+        <a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" class="h_logo" alt="Blogin" title=""></a>
+        <nav>
+            <ul class="main_nav">
+                <li
+                        {% if '/' == request.path %}
+                            class="current"
+                        {% endif %}
+                >
+                    <a href="{% url 'index' %}">
+                        Journal
+                    </a>
+
+                </li>
+                <li
+                        {% if 'about' in request.path %}
+                            class="current"
+                        {% endif %}
+                >
+                    <a href="{% url 'about' %}">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Works</a></li>
+                <li
+                        {% if 'contact' in request.path %}
+                            class="current"
+                        {% endif %}
+                >
+                    <a href="{% url 'index' %}">Contact</a>
+
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header><!-- Header End -->

@@ -1,5 +1,5 @@
 """
-WSGI config for blogdj project.
+WSGI config for stories_index project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -8,9 +8,10 @@ https://docs.djangoproject.com/en/2.2/howto/deployment/wsgi/
 """
 
 import os
+import sys
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'blogdj.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'blogdjango.settings')
 
 application = get_wsgi_application()

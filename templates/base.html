@@ -1,12 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Blog Prctc</title>
+    <title>Blogin | beautiful and Minimal Blog Template  Designed & Coded by pixelhint.com</title>
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 </head>
 <body>
 
+
+    <!-- HEADER -->
+    {% include 'partials/_header.html' %}
+
     {% block content %} {% endblock %}
+
+    <!-- FOOTER -->
+    {% include 'partials/_footer.html' %}
 
 </body>
 </html>

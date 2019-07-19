@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section id="contact">
+		<h1>Subscribe to Journal</h1>
+		<form action="some_action">
+			<div class="container-contact">
+				<label for="name">Name</label>
+				<input type="text" name="user_name" required id="one">
+			</div>
+
+			<div class="container-contact">
+				<label for="last-name">Last Name</label>
+				<input type="text" name="user_lname" required id="two">
+			</div>
+
+			<div class="container-contact">
+				<label for="email">Email</label>
+				<input type="email" name="user_email" required id="three">
+			</div>
+			<div class="button-holder"><input type="submit" value="Subscribe" class="btn-send"></div>
+
+		</form>
+	</section>
+
+    <script type="text/javascript">
+
+		function sleepSec(seconds) {
+			secs = (+new Date()) + seconds * 1000;
+			while ((+new Date) < secs);
+		}
+
+		document.getElementById("one").onclick = function() {
+			document.getElementById("two").className = "fade-elem";
+		};
+
+		document.getElementById("two").onclick = function() {
+			document.getElementById("three").className = "fade-elem";
+		};
+
+
+	</script>
+{% endblock %}
