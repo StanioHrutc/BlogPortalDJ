@@ -1,0 +1,11 @@
+Schemas:
+	SubscribeTo Schema:
+		Name    - Text
+		email   - Email
+		Message - Text
+	
+	Story Schema:
+		Title 	     - Text
+		IMG_OF_STORY - IMG
+		Story Text   - Text
+		DOFPublication - Date
