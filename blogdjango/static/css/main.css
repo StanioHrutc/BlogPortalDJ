@@ -125,9 +125,14 @@ ul.main_nav li a:hover{
 
 .main .article_image{
 	width: 470px;
+	height: 310px;
 	margin-right: 40px;
 }
 
+.article_image > a > img {
+	width: 100%;
+	height: 100%;
+}
 
 .main .post{
 	width: 430px;
@@ -155,13 +160,17 @@ ul.main_nav li a:hover{
 	color: #58c93a;
 }
 
-.main .post p,	
-.main2 .post p{	
+.main .post p,
+.main2 .post p{
 	font-family: 'LatoRegular', 'Helvetica', arial;
 	font-size: 16px;
 	color: #606060;
 	line-height: 20px;
 	margin-bottom: 20px;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 155ch;
 }
 
 .main a.read_more,
@@ -173,14 +182,16 @@ ul.main_nav li a:hover{
 	border: 2px #c2c2c2 solid;
 	color: #c2c2c2;
 	text-decoration: none;
-	margin-top: 14px;
+	margin-top: 20%;
 
+    float: left;
 	border-radius: 100px;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
 	-o-border-radius: 100px;
 	-ms-border-radius: 100px;
 }
+
 
 .main a.read_more:hover,
 .main2 a.read_more:hover{

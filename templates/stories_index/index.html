@@ -2,6 +2,28 @@
 {% load static %}
 {% block content %}
     <section class="main wrapper">
+		{% if stories %}
+			{% for story in stories %}
+				<article>
+					<div class="article_image">
+						<a href="#">
+							<img src="{{ story.story_photo.url }}" alt="" title="">
+						</a>
+					</div>
+					<div class="post">
+						<h1 class="title">
+							<a href="#">{{ story.title }}</a>
+						</h1>
+
+						<p>{{ story.story_text }}</p>
+
+						<a class="read_more" href="#">Continue Reading <i class="read_more_arrow"></i> </a>
+					</div>
+				</article>
+			{% endfor %}
+		{% else %}
+			<h1>There are no stories {{s}}</h1>
+		{% endif %}
 		<article>
 			<div class="article_image">
 				<a href="#">
@@ -12,8 +34,6 @@
 				<h1 class="title">
 					<a href="#">Duis aute irure dolor in henderit in voluptate.</a>
 				</h1>
-
-				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
 
@@ -31,9 +51,6 @@
 				<h1 class="title">
 					<a href="#">Duis aute irure dolor in henderit in voluptate.</a>
 				</h1>
-
-				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
 				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
 
 				<a class="read_more" href="#">Continue Reading <i class="read_more_arrow"></i> </a>
@@ -50,8 +67,6 @@
 				<h1 class="title">
 					<a href="#">Duis aute irure dolor in henderit in voluptate.</a>
 				</h1>
-
-				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
 
