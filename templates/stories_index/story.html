@@ -1,27 +1,28 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load humanize %}
 
 {% block content %}
     <section id="single-story">
 		<div class="story-title">
-			<h1>" Title of the single story "</h1>
+			<h1>"{{ story.title }}"</h1>
 		</div>
 		<div class="picture">
-			<img src="img/pic6.jpg" alt="nature">
+			<img src="{{ story.story_photo.url }}">
 		</div>
 
 		<div class="story-text">
-			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit
-				Porro itaque placeat accusantium, voluptatem a ducimus asperiores reprehenderit accusamus facilis <br>fugit quas cumque quidem laudantium sequi cupiditate nesciunt, ipsam consectetur. Magnam!	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque optio autem accusamus porro tempora, a magnam, aperiam eligendi! Officia odio qui voluptate, debitis asperiores labore. Explicabo blanditiis est pariatur numquam.</p>
+			<p>{{ story.story_text }}</p>
 		</div>
 
 		<div class="additional">
 
 			<div class="go-back">
-				<a href="#" class="back">go to stories</a>
+				<a href="{{request.META.HTTP_REFERER}}" class="back">go to stories</a>
+				<!-- request.META.HTTP_REFERER - simulating of back button -->
 			</div>
 			<div class="authoroty">
-				<p>Author: StanioHrutc</p>
+				<p>posted: {{ story.publication_date | naturaltime }}</p>
 			</div>
 		</div>
 	</section>
