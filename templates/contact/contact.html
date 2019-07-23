@@ -4,7 +4,8 @@
 {% block content %}
     <section id="contact">
 		<h1>Subscribe to Journal</h1>
-		<form action="some_action">
+		<form action="{% url 'contact' %}" method="POST">
+			{% csrf_token %}
 			<div class="container-contact">
 				<label for="name">Name</label>
 				<input type="text" name="user_name" required id="one">
@@ -12,7 +13,7 @@
 
 			<div class="container-contact">
 				<label for="last-name">Last Name</label>
-				<input type="text" name="user_lname" required id="two">
+				<input type="text" name="last_name" required id="two">
 			</div>
 
 			<div class="container-contact">
