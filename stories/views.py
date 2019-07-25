@@ -2,18 +2,26 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 # Create your views here.
-
-from . models import Story
+from django.core.mail import send_mail
+from .models import Story
+from contact.models import Contact
 # for fetching data from DB
 
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
-
+# when we adding new class to Story.object we receive this message
 @receiver(pre_save, sender=Story)
 def my_handler(sender, **kwargs):
-    print('Object is saved')
-# changed -> add sending emails
+    # sending on email of every contact
+    for contact in Contact.objects.all():
+        if contact.is_subscribed:
+            send_mail('Blog was updated',
+                      'Check out new article on our website',
+                      'grucushun90@gmail.com',
+                      [contact.email],
+                      fail_silently=False
+                      )
 
 
 stories = Story.objects.order_by('-publication_date').filter(is_published=True)
