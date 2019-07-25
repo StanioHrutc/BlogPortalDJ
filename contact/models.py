@@ -6,7 +6,7 @@ from django.db import models
 class Contact(models.Model):
     name          = models.CharField(max_length=20)
     sur_name      = models.CharField(max_length=20)
-    email         = models.CharField(max_length=50)
+    email         = models.EmailField(max_length=70)
     is_subscribed = models.BooleanField(default=False)
 
     def __str__(self):

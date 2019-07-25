@@ -6,6 +6,16 @@ from django.http import HttpResponse
 from . models import Story
 # for fetching data from DB
 
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
+
+
+@receiver(pre_save, sender=Story)
+def my_handler(sender, **kwargs):
+    print('Object is saved')
+# changed -> add sending emails
+
+
 stories = Story.objects.order_by('-publication_date').filter(is_published=True)
 # TODO: to make it work typo: pip install pylint-django
 context = {
